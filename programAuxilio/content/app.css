@@ -1,0 +1,83 @@
+.form {
+    text-align: center;
+    padding-top: 12%;
+    padding:20px;
+    background: rgba(255,255,255,0.9);
+    margin: 10% auto 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.form2 {
+    text-align: center;
+    padding-top: 10%;
+    padding: 25px;
+    background: rgba(255,255,255,0.9);
+    margin: 6% auto 10px auto;
+    max-width: 500px;
+    border-radius: 50px;
+}
+
+.unifor_img {
+    background: rgba(255,255,255,0.9);
+    padding:20px;
+    max-width: 260px;
+    border-radius: 10px;
+    
+}
+.fnome {
+    text-align: center;
+    width: 300px;
+}
+
+.titulo {
+    color: aqua;
+
+}
+
+.parcelas_img {
+    background: rgba(255,255,255,0.9);
+    padding:20px;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+.fcpf {
+    text-align: center;
+    width: 300px;
+}
+
+.fcnpj {
+    text-align: center;
+    width: 300px;
+}
+
+.femail {
+    text-align: center;
+    width: 300px;
+}
+
+.fdata {
+    text-align:center;
+    width: 10;
+}   
+
+.fconta {
+    text-align-last: center;
+    width: 300px;
+}
+
+.button-primary{
+    height: 100px;
+}
+
+.bg_video{
+	position: fixed; 
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -1000;
+	background-size: cover; 
+}

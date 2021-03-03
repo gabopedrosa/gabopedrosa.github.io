@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auxílio Emergencial</title>
+    <link rel="stylesheet" href="/content/app.css">
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">  //  Conectando LIB EmailJS  </script>
+
+    <script type="text/javascript">  //  Inicialiazando Usuário de EmailJS
+        (function () {
+            emailjs.init("user_f47Es2xrdYfsgZPjWjDSs");
+        })();
+    </script>
+</head>
+
+<body>
+    <video class="bg_video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="/content/video-2.mp4" type="video/mp4">
+    </video>
+    <div class="form">
+        <div>
+            <img class="unifor_img" src="/content/unifor.jpg">
+            <form>
+                <div>
+                    <input type="text" class="fnome" id="fnome" name="fnome" placeholder="Nome Completo">
+                </div>
+                <div>
+                    <input type="text" class="fcpf" id="fcpf" name="fcpf" placeholder="CPF (apenas números)"
+                        onkeydown="javascript: fMasc( this, mCPF );">
+                </div>
+                <div>
+                    <input type="text" class="fcnpj" id="fcnpj" name="fcnpj" placeholder="CNPJ (apenas números)"
+                        onkeydown="javascript: fMasc( this, mCNPJ );">
+                </div>
+                <div>
+                    <input type="email" class="femail" id="femail" name="femail" placeholder="E-mail">
+                </div>
+                <div>
+                    <input type="date" class="fdata" id="fdata" name="fdata">
+                </div>
+                <div>
+                    <select class="fconta" id="fconta" name="fconta">
+                        <option> Selecione </option>
+                        <option> Poupança 013 </option>
+                        <option> Conta Corrente PF 001 </option>
+                        <option> Conta Caixa Fácil 023 </option>
+                        <option> Conta Corrente PJ 003 </option>
+                        <option> Poupança PJ 022 </option>
+                        <option> Conta Simples PF </option>
+                        <option> Entidades Públicas 006 </option>
+                        <option> Poupança PJ </option>
+                        <option> Depósitos Lotéricos 043 </option>
+                        <option> Dep. Instituições Financ. 007 </option>
+                    </select>
+                </div>
+                <input class="button-primary" type="submit" value="Cadastrar Auxílio" onclick=enviarMail()>
+            </form>
+        </div>
+        <a href="tabelaParcelas.html"><button class="btnParcela">Tabela das Parcelas</button></a>
+</body>
+</html>
+
+<script>
+    //  Conectando ID de HTML com EmailJS
+    function enviarMail() {
+        var sendMail = {
+ 
+        }
+        
+        emailjs.send("service_l5jb9he", "template_nyo9tv8", sendMail);
+    }
+
+    //  Máscara de CPF
+    function fMasc(objeto, mascara) {
+        obj = objeto
+        masc = mascara
+        setTimeout("fMascEx()", 1)
+    }
+    function fMascEx() {
+        obj.value = masc(obj.value)
+    }
+    function mCPF(cpf) {
+        cpf = cpf.replace(/\D/g, "")
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+        return cpf;
+    }
+    function mCNPJ(cnpj) {
+        cnpj = cnpj.replace(/\D/g, "")
+        cnpj = cnpj.replace(/^(\d{2})(\d)/, "$1.$2")
+        cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3")
+        cnpj = cnpj.replace(/\.(\d{3})(\d)/, ".$1/$2")
+        cnpj = cnpj.replace(/(\d{4})(\d)/, "$1-$2")
+        return cnpj
+    }
+
+</script>
