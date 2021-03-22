@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torre Honai</title>
+</head>
+<script type='text/javascript' src="index.js"></script>
+<link rel="stylesheet" href="./style.css">
+<body>
+        <img src="./tower.jfif" class="bg_img">
+        <div class="body">
+            <h1>Torre Hanói</h1> 
+            <strong> Discos para usar no jogo: </strong> 
+            <input type="number" id="disk" placeholder="Apenas números"> 
+            <button id="game" onclick="iniciarJogo(document.getElementById('disk').value)">Iniciar Jogo</button> <br> <br>
+            <p id="log"></p>
+            <p id="result"></p>
+        </div>
+        <div class="body2">
+            <button id='restart' onclick="restart()">Apagar dados<img src="./trash.png" width="50"> </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./start.html"><button><img src="./back.png" width="50">Formatador ABNT</button> </a>
+        </div>
+    </body>
+</html>
