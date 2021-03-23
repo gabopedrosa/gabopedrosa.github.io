@@ -15,6 +15,7 @@ var iniciarJogo = function(disk)
     document.getElementById("result").innerHTML = '<b> Total de movimentos para resolver a torre hanoi: ' + jogadas + '</b>';
     console.log('Total de movimentos para resolver a torre hanoi:  ' + jogadas);
 }
+
 var resolverTorre = function (totalDisks, pInicial, pFinal, pAuxiliar) {
     if (totalDisks > 0) {
         resolverTorre(totalDisks - 1, pInicial, pAuxiliar, pFinal);
